@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R"
 author: "Priit Adler"
-date: "2024-06-18"
+date: "2024-10-09"
 output: html_document
 editor_options: 
   markdown: 
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction (Rstudio / R)
 
 You can find this and the data files from ELIXIREstonia github:
-[https://github.com/ELIXIREstonia/2024-06-18-R-visualisation](https://github.com/ELIXIREstonia/2024-06-18-R-visualisation)
+[https://github.com/ELIXIREstonia/2024-10-09-R-visualisation](https://github.com/ELIXIREstonia/2024-10-09-R-visualisation)
 
 R is a popular open-source programming language and environment for statistical
 computing and graphics.
@@ -39,7 +39,7 @@ for more detailed overview.
 This is the second part of a two-part curriculum designed to introduce R and
 ggplot2. If you are unfamiliar with the basic syntax, data types, and the
 tidyverse in R, then you should first check out Part One at:
-[https://github.com/ELIXIREstonia/2024-06-18-R-basic](https://github.com/ELIXIREstonia/2024-06-18-R-basic).
+[https://github.com/ELIXIREstonia/2024-10-02-R-basic](https://github.com/ELIXIREstonia/2024-10-02-R-basic).
 
 ## Loading the Tidyverse
 
