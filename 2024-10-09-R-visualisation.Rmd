@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction (Rstudio / R)
 
 You can find this and the data files from ELIXIREstonia github:
-[https://github.com/ELIXIREstonia/2024-10-09-R-visualisation](https://github.com/ELIXIREstonia/2024-10-09-R-visualisation)
+<https://github.com/ELIXIREstonia/2024-10-09-R-visualisation>
 
 R is a popular open-source programming language and environment for statistical
 computing and graphics.
@@ -32,14 +32,13 @@ in a segmented manner, primarily divided into four main panes.
 
 -   Files / **Plots** / Packages / **Help** / etc...
 
-see:
-[https://rstudio.github.io/cheatsheets/html/rstudio-ide.html](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html)
-for more detailed overview.
+see: <https://rstudio.github.io/cheatsheets/html/rstudio-ide.html> for more
+detailed overview.
 
 This is the second part of a two-part curriculum designed to introduce R and
 ggplot2. If you are unfamiliar with the basic syntax, data types, and the
 tidyverse in R, then you should first check out Part One at:
-[https://github.com/ELIXIREstonia/2024-10-02-R-basic](https://github.com/ELIXIREstonia/2024-10-02-R-basic).
+<https://github.com/ELIXIREstonia/2024-10-02-R-basic>.
 
 ## Loading the Tidyverse
 
@@ -142,7 +141,7 @@ sequence of transformations applied to the data.
 # note that we are overwriting (updating) the original data
 data <- data %>%
   mutate(
-    HalfOfOtherVariabel = YourOtherVariable / 2, # we can add another column based on existing columns
+    HalfOfOtherVariable = YourOtherVariable / 2, # we can add another column based on existing columns
     YourGroup = case_when(
       YourCategory %in% c("A", "B") ~ "Group 1", # combine A and B into Group 1
       YourCategory %in% c("C", "D") ~ "Group 2", # combine C and D into Group 2
@@ -158,8 +157,11 @@ data <- data %>%
 head(data)
 ```
 
-Find more options from
-[data-wrangling-cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+Rstudio developers host number of useful
+[cheatsheets](https://posit.co/resources/cheatsheets/), take a look. For example
+[data transformations with
+dplyr](https://rstudio.github.io/cheatsheets/data-transformation.pdf) (dplyr is
+part of tidyverse)
 
 ### Task:
 
@@ -439,7 +441,8 @@ Use the cell below to repeat the steps we have done so far. Generate a plot
 where you show `Islander_data` data by `Drug` and `Diff`. Use `geom_violin`,
 what does it show and how to interpret it? Add `geom_point` to there as well,
 make it very light (transparent), use position `jitter`. Find more options from
-[data-wrangling-cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+[data-transformations](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
+cheatsheet.
 
 ```{r fig.width=8, fig.height=6}
 
@@ -455,12 +458,13 @@ variables with different units.
 
 ### Scaling Numeric Variables
 
-For numeric variables, you can use scale_x_continuous() and scale_y_continuous()
-to adjust the scales of the x and y axes. The mtcars dataset, which is built
-into R, provides a great example for demonstrating this.
+For numeric variables, you can use `scale_x_continuous()` and
+`scale_y_continuous()` to adjust the scales of the `x` and `y` axes. The
+`mtcars` dataset, which is built into R, provides a great example for
+demonstrating this.
 
 Example: Log Transformation of Horsepower Let's create a scatter plot of miles
-per gallon (mpg) vs. horsepower (hp) and scale the y axis using log
+per gallon (mpg) vs. horsepower (hp) and scale the `y` axis using log
 transformations:
 
 ```{r}
@@ -479,9 +483,10 @@ that might not be apparent with the original scales.
 
 ### Scaling Discrete Variables
 
-For discrete variables, you can use scale_x_discrete() and scale_y_discrete() to
-modify the order or appearance of the categories. With mtcars, we can explore
-how the number of cylinders (cyl) in a car affects its fuel efficiency (mpg).
+For discrete variables, you can use `scale_x_discrete()` and
+`scale_y_discrete()` to modify the order or appearance of the categories. With
+`mtcars`, we can explore how the number of cylinders (cyl) in a car affects its
+fuel efficiency (mpg).
 
 Example: Reordering Cylinder Categories by Median MPG Let's create a box plot of
 the number of cylinders vs. mpg and reorder the cylinder categories based on
@@ -553,7 +558,8 @@ enhance your visualizations.
 
 Refactoring involves changing the levels of a factor variable. You can use the
 `forcats` package (part of the tidyverse) to refactor variables. The
-`fct_recode()` function can be used to recode the levels of a factor.
+`fct_recode()` function can be used to recode the levels of a factor. See also
+[cheatsheet](https://rstudio.github.io/cheatsheets/factors.pdf).
 
 ```{r}
 # Load the required packages
@@ -570,7 +576,7 @@ head(Isd_refactored)
 ```
 
 In this example, we refactored the `Drug` variable by changing the levels from
-letters to active drug names.
+letters to actual drug names.
 
 ### Reordering
 
@@ -685,8 +691,8 @@ scatter_plot_custom_theme
 By adding titles, axis labels, limits, and customizing the theme, you can create
 more informative and visually appealing plots that effectively communicate your
 data's story. See
-[cheatsheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)
-for additional themes.
+[cheatsheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf) for
+additional themes.
 
 ## Exporting and Saving Plots with ggsave
 
@@ -804,8 +810,8 @@ colours and themes as you see fit. Start building it gradually, this makes
 finding and identifying errors easier. You can even take your own data and
 explore it. But try to get to a publishing ready image (*sans* figure legend).
 
-Find more options from
-[data-wrangling-cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf).
+Explore more options from various
+[cheatsheets](https://posit.co/resources/cheatsheets/).
 
 ```{r}
 
@@ -815,5 +821,7 @@ Find more options from
 
 #### Bonus
 
-Explore ['esquisse'](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html) package for 
-interactive plot building. It starts a shiny app to allow drag-and-drop graph building. 
+Explore
+['esquisse'](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html)
+package for interactive plot building. It starts a shiny app to allow
+drag-and-drop graph building.
