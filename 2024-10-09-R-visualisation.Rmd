@@ -825,3 +825,7 @@ Explore
 ['esquisse'](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html)
 package for interactive plot building. It starts a shiny app to allow
 drag-and-drop graph building.
+
+### Feedback
+
+Before you leave, please provide ['feedback'](https://forms.gle/1PfHcBkVgktUG7zU6)!
